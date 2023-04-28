@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>
+Moon Photo editor 
+        </Title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+
+        <ul class="top">
+            <li><label class="custom-file-upload"><input type="file" name="selectedImage" id="selectedImage"  accept="image/jpeg, image/png" onchange="handleFiles(this.files)"/>Add Photo</label></li>
+            <li><label class="custom-file-upload" id="he">Download</label></li>
+          </ul>
+
+          <div class="can">
+            <div class="imghold" style="align-items: center;">
+            <canvas id="canvas"></canvas>
+             </div>
+          </div>
+
+<div class="sliders">
+    <p>Hue
+    <input type="range" min="1" max="100" value="0" class="slider" id="hueSlider" onchange="change()">
+    </p>
+    <br>
+    <p>Saturation
+    <input type="range" min="0" max="100" value="1" class="slider" id="satSlider" onchange="change()">
+    </p>
+    <br>
+    <p>contrast
+    <input type="range" min="0" max="200" value="100" class="slider" id="crSlider" onchange="change()">
+    </p>
+    <br>
+    <p>Brightness
+    <input type="range" min="0" max="200" value="100" class="slider" id="brSlider" onchange="change()">
+    </p>
+    <br>
+    <p>blur
+    <input type="range" min="0" max="100" value="0" class="slider" id="blrSlider" onchange="change()">
+    </p>
+    <br>
+    <p>
+        zoom
+        <input id="test" min="1" max="10" value='6' step="1" onchange="showVal(this.value)" type="range"/>
+    </p>
+    <br>
+</div>
+          <!-- <div class="can">
+          <div class="imghold" style="align-items: center;">
+          <canvas id="canvas"></canvas>
+           </div>
+        </div> -->
+        <script src="index.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    </body>
+</html>
